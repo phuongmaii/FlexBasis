@@ -1,0 +1,182 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f5;
+    color: #26352c;
+    padding: 24px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2d6a4f;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #66756b;
+}
+
+main {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+h2 {
+    font-size: 19px;
+    color: #2d6a4f;
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 2px dashed #74a88a;
+    background: #f8fbf9;
+    border-radius: 8px;
+}
+
+.item {
+    padding: 18px 10px;
+    text-align: center;
+    background: #d8f3dc;
+    border: 1px solid #74a88a;
+    border-radius: 6px;
+    color: #214d35;
+    overflow-wrap: anywhere;
+}
+
+/* 1. Flex-basis theo px */
+.px-demo {
+    flex-wrap: wrap;
+}
+
+.item-200 {
+    flex: 0 0 200px;
+}
+
+.item-100 {
+    flex: 0 0 100px;
+}
+
+.item-150 {
+    flex: 0 0 150px;
+}
+
+/* 2. Auto và initial */
+.auto-demo {
+    flex-wrap: wrap;
+}
+
+.auto-item {
+    width: 180px;
+    flex: 0 1 auto;
+}
+
+.initial-item {
+    width: 120px;
+    flex-basis: initial;
+}
+
+/* 3. Flex-direction column */
+.column-demo {
+    flex-direction: column;
+    height: 390px;
+}
+
+.column-demo .item {
+    flex: 0 0 100px;
+}
+
+/* 4. Flex-basis theo phần trăm */
+.percent-demo .item {
+    flex: 0 1 50%;
+}
+
+/* 5. Flex-basis kết hợp flex-grow */
+.grow-demo {
+    width: 100%;
+}
+
+.grow-1 {
+    flex: 1 1 100px;
+}
+
+.grow-2 {
+    flex: 2 1 100px;
+}
+
+.grow-3 {
+    flex: 1 1 100px;
+}
+
+/* 6. Flex-basis inherit */
+.inherit-parent {
+    display: flex;
+    flex-basis: 300px;
+    width: 100%;
+    padding: 10px;
+    border: 2px dashed #74a88a;
+    background: #f8fbf9;
+    border-radius: 8px;
+}
+
+.inherit-child {
+    flex-basis: inherit;
+    padding: 18px;
+    background: #d8f3dc;
+    border: 1px solid #74a88a;
+    border-radius: 6px;
+    text-align: center;
+}
+
+footer {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+    color: #2d6a4f;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    section {
+        padding: 14px;
+    }
+
+    .item-200 {
+        flex-basis: 160px;
+    }
+
+    .item-150 {
+        flex-basis: 130px;
+    }
+}
